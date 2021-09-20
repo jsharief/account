@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Java Bee account Services
+  #Datasource
+  datasource:
+    url:  jdbc:mysql://localhost:3306/accountdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: silver_commerce
+    password: silver_commerce
+    driver-class: com.mysql.jdbc.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size:  5
+  #JPA
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        storage_engine: innodb
+    #N open-in-view: false
+server:
+  port: 8010
